@@ -1,0 +1,299 @@
+.admin-panel {
+    .row {
+        // padding-top: 5rem;
+        .col-4 {
+            width: 20%;
+            float: left;
+            background-color: #222d31;
+            color: white;
+            box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+            height: 100vh;
+            font-size: 1.1rem;
+            .admin-control {
+                .a-c-header {
+                    display: flex;
+                    align-items: center;
+                    padding: 0.8rem;
+                    justify-content: space-around;
+                    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(0, 0, 0, 0.8)),
+                        url("https://p4.wallpaperbetter.com/wallpaper/657/137/89/work-finance-documents-office-wallpaper-preview.jpg");
+                    background-position: 45%;
+                    background-repeat: no-repeat;
+                    i {
+                        padding: 1.1rem 1.2rem;
+                        background-color: rgba(255, 255, 255, 0.13);
+                        border-radius: 50%;
+                        box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+                        font-size: 1.5rem;
+                    }
+                    .a-c-name {
+                        font-style: italic;
+                        font-weight: 500;
+                        .a-c-status {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.4rem;
+                            font-size: 1rem;
+                            color: rgba(255, 255, 255, 0.829);
+                            letter-spacing: 0.3px;
+                            font-weight: 300;
+                            .dot {
+                                padding: 0.3rem;
+                                border-radius: 50%;
+                                background-color: #0dad9f;
+                            }
+                        }
+                    }
+                }
+
+                .a-c-select-field {
+                    text-transform: capitalize;
+                    .a-c {
+                        .tag {
+                            background-color: #1a2226;
+                            padding: 0.8rem 1rem;
+                            color: #59707c;
+                            text-transform: uppercase;
+                            font-style: italic;
+                            letter-spacing: 0;
+                            font-weight: 500;
+                            font-size: 1rem;
+                            i {
+                                padding-right: 0.3rem;
+                            }
+                        }
+                        .content {
+                            .ct {
+                                cursor: pointer;
+                                padding: 1rem;
+                                border-top: 1px solid rgba(0, 0, 0, 0.1);
+                                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                                i {
+                                    padding-right: 0.8rem;
+                                }
+                            }
+                            .ct:hover {
+                                background-color: #59707c;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .col-8 {
+            width: 80%;
+            float: left;
+            height: 100vh;
+            .body {
+                padding-top: 5rem;
+                .bd {
+                    .title {
+                        background-color: #02bbacad;
+                        color: white;
+                        padding: 1rem 0;
+                        padding-left: 1.8rem;
+                        display: flex;
+                        align-items: center;
+                        gap: 1rem;
+                        font-size: 1.5rem;
+                        letter-spacing: 0;
+                        font-weight: 600;
+                        i {
+                            padding: 1rem;
+                            background-color: white;
+                            color: #337ab6;
+                            font-size: 2rem;
+                            border-radius: 50%;
+                        }
+                    }
+
+                    .small-nav {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 0 1.8rem;
+                        background-color: #f0f2f5;
+                        .left {
+                            font-size: 1.1rem;
+                            font-weight: 500;
+                            cursor: pointer;
+                            padding: 1rem 0;
+                            i {
+                                padding-right: 0.3rem;
+                            }
+                        }
+                        .left.active {
+                            color: #5fb0e6;
+                            border-bottom: 3px solid #5fb0e6;
+                        }
+                        .right {
+                            button {
+                                cursor: pointer;
+                                background-color: #02bbacad;
+                                color: white;
+                                text-transform: uppercase;
+                                font-weight: 600;
+                                letter-spacing: 0;
+                                border: none;
+                                border-radius: 5px;
+                                padding: 0.5rem;
+                                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                transition: 0.1s ease-in-out;
+                                i {
+                                    font-size: 1rem;
+                                    padding: 0rem 0.5rem;
+                                }
+                            }
+                            button:hover {
+                                transform: scale(1.1);
+                            }
+                            button:active {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+
+                    ::-webkit-scrollbar {
+                        height: 5px;
+                    }
+                    ::-webkit-scrollbar-track {
+                        margin-left: 1.8rem;
+                        margin-top: 3.65rem;
+                    }
+                    ::-webkit-scrollbar-thumb {
+                        background-color: #02bbacad;
+                    }
+
+                    .table {
+                        padding: 1rem 1.8rem;
+                        height: 65vh;
+                        overflow-x: auto;
+                        .table-entry {
+                            padding-bottom: 1rem;
+                            word-spacing: 0.2rem;
+                            font-weight: 600;
+                            font-size: 0.85rem;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            input {
+                                padding: 0.1rem 0.2rem;
+                                border-radius: 5px;
+                                border: 1px solid grey;
+                                font-size: 1rem;
+                            }
+                            .features {
+                                width: auto;
+                            }
+                        }
+                        table {
+                            border-collapse: collapse;
+                            width: 100%;
+                            th,
+                            td {
+                                border: 0.5px solid rgb(241, 241, 241);
+                                font-size: 0.85rem;
+                                // width: fit-content;
+                                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                                text-align: left;
+                                a {
+                                    color: black !important;
+                                }
+                                a:hover {
+                                    text-decoration: underline !important;
+                                    color: blue !important;
+                                }
+                                button {
+                                    background-color: transparent;
+                                    border: none;
+                                    cursor: pointer;
+                                    // font-size: 0.88rem;
+                                    i {
+                                        box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                    }
+                                    i:hover {
+                                        transform: scale(1.2);
+                                        color: #59707c;
+                                    }
+                                    i:active {
+                                        transform: scale(0.9);
+                                    }
+                                }
+                            }
+                            th {
+                                background-color: #deefda;
+                                font-size: 0.8rem;
+                                text-transform: uppercase;
+                            }
+                            .delete-edit {
+                                position: relative;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                gap: 0.5rem;
+                                height: 100%;
+                                .delete {
+                                    color: #dc3545;
+                                    // position: relative;
+                                }
+                                .edit {
+                                    color: #28a745;
+                                    // position: absolute;
+                                }
+                            }
+                        }
+                    }
+
+                    .bottom {
+                        padding: 0rem 1.8rem;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        .showing {
+                            font-size: 0.85rem;
+                            font-weight: 500;
+                            color: grey;
+                        }
+                        .button {
+                            display: flex;
+                            align-items: center;
+                            gap: 0.5rem;
+                            button {
+                                padding: 0.2rem 1rem;
+                                border: none;
+                                cursor: pointer;
+                                background-color: black;
+                                color: white;
+                                transition: 0.1s ease-in-out;
+                                transform: scale(0.9);
+                                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                                font-size: 0.85rem;
+                                border-radius: 5px;
+                            }
+
+                            button:hover {
+                                transform: scale(1);
+                            }
+
+                            button:active {
+                                transform: scale(0.9);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1210px) {
+        .row {
+            .col-4 {
+                display: none;
+            }
+            .col-8 {
+                width: 100%;
+            }
+        }
+    }
+}

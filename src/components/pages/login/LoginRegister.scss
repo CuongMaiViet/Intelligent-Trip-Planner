@@ -1,0 +1,127 @@
+.login-register-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    .flex {
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    i {
+        // border: 2px solid grey;
+        color: rgba(128, 128, 128, 0.521);
+        background-color: rgba(211, 211, 211, 0.144);
+        padding: 20px;
+        border-right: none;
+        border: none;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+    form {
+        text-align: center;
+        width: 30%;
+        img {
+            width: 40%;
+            aspect-ratio: 1;
+        }
+        fieldset {
+            border: none;
+            border-top: 2px solid #000;
+            flex-direction: column;
+            gap: 1rem !important;
+            width: 100%;
+            legend {
+                padding: 0 10px 5px 10px;
+                margin-bottom: 2rem;
+                font-size: 2rem;
+                font-weight: 900;
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+            input {
+                width: 100%;
+                padding: 20px 0;
+                background-color: rgba(211, 211, 211, 0.144);
+                border: none;
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+                outline: none;
+            }
+            #pw {
+                padding-left: 5px;
+            }
+            .button {
+                width: 100%;
+                margin-top: 1.5rem;
+                button {
+                    width: 100%;
+                    padding: 10px 0;
+                    background: linear-gradient(to right, #15f4ed77 0%, #f54b56bd 100%);
+                    cursor: pointer;
+                    border-radius: 10px;
+                    border: none;
+                    color: white;
+                    font-size: 1.2rem;
+                    letter-spacing: 1px;
+                    font-weight: 500;
+                    text-shadow: 4px 4px 4px #aaa;
+                    transition: 0.25s ease-in-out;
+                }
+                button:hover {
+                    letter-spacing: normal;
+                }
+            }
+            .register-redirect {
+                margin-top: 0.5rem;
+                width: 100%;
+                justify-content: center;
+                gap: 1rem;
+                color: #000;
+                a {
+                    color: #f54b56bd;
+                    font-style: italic;
+                    transform: scale(1.1);
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+            .login-redirect {
+                margin-top: 0.5rem;
+                width: 100%;
+                justify-content: center;
+                gap: 1rem;
+                color: #000;
+                a {
+                    color: #f54b56bd;
+                    font-style: italic;
+                    transform: scale(1.1);
+                }
+                a:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        form {
+            width: 40%;
+        }
+    }
+    @media screen and (max-width: 860px) {
+        form {
+            width: 50%;
+        }
+    }
+    @media screen and (max-width: 720px) {
+        form {
+            width: 60%;
+        }
+    }
+    @media screen and (max-width: 580px) {
+        form {
+            width: 80%;
+        }
+    }
+}

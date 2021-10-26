@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: 0px;
+  /* font-family: "Oswald", sans-serif; */
+  /* font-family: "Raleway", sans-serif; */
+  font-family: "Roboto", sans-serif;
+  src: local("Roboto"), local("Roboto-Regular"),
+    url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap")
+      format("woff2");
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar-thumb {
+  background: grey;
+  /* border-radius: 50%; */
+}
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@1,200;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Alata&family=Yanone+Kaffeesatz&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prompt&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,500;1,300&display=swap");

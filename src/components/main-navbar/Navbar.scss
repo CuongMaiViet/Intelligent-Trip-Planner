@@ -1,0 +1,183 @@
+.header {
+    position: relative;
+    .navbar {
+        background-color: rgba(255, 255, 255, 1);
+        right: 0;
+        left: 0;
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 12rem;
+        z-index: 10;
+        box-shadow: rgba(0, 0, 0, 0.08) 0px 1px 12px !important;
+        .nav-logo {
+            width: 100px;
+            height: 50px;
+            // margin: 0 10px;
+            // overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+                padding: 0px;
+                transform: scale(1.1);
+            }
+        }
+        .hamburger {
+            display: none;
+            .bar {
+                display: block;
+                width: 25px;
+                height: 3px;
+                margin: 5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color: #101010;
+            }
+        }
+        .nav-menu {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 0.5rem;
+            .nav-item {
+                margin-left: 1.5rem;
+                opacity: 1 !important;
+                text-transform: capitalize;
+                .nav-link {
+                    font-size: 1rem;
+                    font-weight: 400;
+                    color: rgba(128, 128, 128, 1);
+                    // text-shadow: 10px 5px 2px #2222222c;
+                    // mix-blend-mode: difference;
+                    letter-spacing: 1px;
+                    font-family: "Noto Sans JP", sans-serif !important;
+                    text-transform: uppercase;
+                    transition: 0.25s ease;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    gap: 0.2rem;
+                    i {
+                        width: 20px;
+                        height: 20px;
+                        line-height: 20px;
+                    }
+                }
+                .nav-link:hover {
+                    opacity: 1;
+                    letter-spacing: 0px;
+                }
+                button {
+                    position: relative;
+                    cursor: pointer;
+                    background-color: #fff;
+                    border: none;
+                    outline: none;
+                    .fa-user-circle {
+                        transform: scale(1.5);
+                    }
+                }
+                .dropdown {
+                    position: absolute;
+                    background-color: rgb(219, 219, 219);
+                    top: 150%;
+                    opacity: 0;
+                    visibility: hidden;
+                    color: rgb(142, 149, 152);
+                    box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 8px 0 !important;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                    border-radius: 10px;
+                    padding: 10px 0 10px 10px;
+                    width: 200px;
+                    height: 100px;
+                    z-index: 100;
+                    a {
+                        border-radius: 10px;
+                        gap: 0.2rem;
+                        i {
+                            width: 30px;
+                            height: 30px;
+                            line-height: 30px;
+                        }
+                    }
+                }
+                .dd-explore {
+                    top: 140%;
+                    right: 0%;
+                    height: 120px;
+                }
+                .dd-profile {
+                    right: -150%;
+                }
+                .dropdown::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 87%;
+                    right: 15%;
+                    width: 0;
+                    height: 0;
+                    border-left: 10px solid transparent;
+                    border-bottom: 20px solid rgb(219, 219, 219);
+                    border-right: 10px solid transparent;
+                }
+                .dd-explore::before {
+                    bottom: 90%;
+                }
+                button:focus-within .dropdown {
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 833px) {
+            .nav-menu {
+                position: fixed;
+                left: -100%;
+                top: 5rem;
+                flex-direction: column;
+                background-color: #fff;
+                width: 100%;
+                border-radius: 10px;
+                text-align: center;
+                transition: 0.3s;
+                box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+                .nav-item {
+                    margin: 2.5rem 0;
+                }
+            }
+
+            .nav-menu.active {
+                left: 0;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger.active .bar:nth-child(2) {
+                opacity: 0;
+            }
+
+            .hamburger.active .bar:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            .hamburger.active .bar:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+    }
+    @media only screen and (max-width: 833px) {
+        .navbar {
+            padding: 0.5rem 2rem;
+        }
+    }
+}

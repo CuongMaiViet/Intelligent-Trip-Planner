@@ -1,0 +1,412 @@
+.main-places-display {
+    .flex {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+    .row {
+        .toggle-map {
+            button {
+                display: none;
+                font-size: 1.5rem;
+                padding: 0.3rem 0.5rem;
+                outline: none;
+                background: linear-gradient(to right, #15f4ed 0%, #f54b56 100%);
+                border-radius: 50%;
+                position: fixed;
+                bottom: 3%;
+                right: 1%;
+                z-index: 99999999;
+                border: none;
+                cursor: pointer;
+                box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.2);
+                color: rgba(255, 255, 255, 0.8);
+            }
+            button:hover {
+                i {
+                    transform: scale(1.2);
+                    transition: 0.25s ease;
+                }
+            }
+        }
+        .left {
+            float: left;
+            width: 50%;
+            box-shadow: 4px 8px 16px 5px rgba(0, 0, 0, 0.4);
+            // box-shadow: 10px 0px 10px 5px black !important;
+            transition: 0.5s ease;
+            .top {
+                width: 100%;
+                height: 100%;
+                background-color: rgb(126, 126, 126);
+                .img-text {
+                    width: 100%;
+                    height: 100%;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        aspect-ratio: 16/9;
+                        opacity: 0.8;
+                    }
+                }
+            }
+            .side-bar {
+                // display: none;
+                position: fixed;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                top: 0;
+                bottom: 0;
+                justify-content: flex-start;
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1%;
+                padding-top: 3rem;
+                width: 2.8rem;
+                background-color: #fff;
+                font-size: 0.8rem;
+                z-index: 100;
+                box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                i {
+                    font-size: clamp(1.5rem, 1vw, 3rem);
+                    border: 1px solid black;
+                    padding: 50%;
+                    border-radius: 50%;
+                    background-color: #000;
+                    color: white;
+                    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                    transform: scale(0.7);
+                }
+                .nav-side-item {
+                    width: 100%;
+                    cursor: pointer;
+                    font-weight: 500;
+                    color: #bac1c8;
+                    font-size: smaller;
+                    transition: 0.25s ease;
+                    flex-direction: column;
+                    gap: 0.1rem;
+                }
+                .nav-side-item:hover {
+                    color: black;
+                    transform: scale(1.2);
+                }
+            }
+            .body {
+                background-color: #f3f4f5;
+                position: relative;
+                float: right;
+                width: 94%;
+                height: 100%;
+                .content {
+                    width: 100%;
+                    height: 100%;
+                    .about {
+                        background-color: #fff;
+                        position: relative;
+                        padding: 2rem;
+                        width: 100%;
+                        justify-content: space-between;
+                        gap: 2.5rem;
+                        .button {
+                            flex-direction: column;
+                            gap: 0.5rem;
+                        }
+                        button {
+                            cursor: pointer;
+                            background-color: rgb(255, 56, 92);
+                            color: white;
+                            border: none;
+                            border-radius: 20px;
+                            padding: 10px 20px;
+                            text-transform: uppercase;
+                            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                            transition: 0.25s ease;
+                            font-weight: 500;
+                        }
+                        .back {
+                            background-color: #15f4edce;
+                            color: black;
+                        }
+                        button:hover {
+                            transform: scale(0.9);
+                        }
+                        .trip-basic-info {
+                            width: 100%;
+                            padding: 1rem 0;
+                            box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
+                            border-radius: 10px;
+                            position: relative;
+                            .basic-info {
+                                gap: 0rem;
+                                position: relative;
+                            }
+                            .name-price {
+                                // width: 50%;
+                                width: 100%;
+                                justify-content: center;
+                                align-items: center;
+                                flex-direction: column;
+                                gap: 0.5rem;
+                                .startdate-enddate {
+                                    width: 100%;
+                                    gap: 0.5rem;
+                                }
+                                .name {
+                                    max-width: 100%;
+                                    input[type="text"] {
+                                        text-align: center;
+                                        width: 100%;
+                                        border: none;
+                                        outline: none;
+                                        font-weight: bold;
+                                        padding: 0.2rem;
+                                        // font-size: clamp(2rem, 1vw, 5rem);
+                                        font-size: 2rem;
+                                        overflow: hidden;
+                                    }
+                                }
+                            }
+                            .price {
+                                font-size: 1.5rem;
+                                gap: 0.5rem;
+                                width: 100%;
+                                i {
+                                    color: #4fa64f;
+                                }
+                            }
+                            .notenote {
+                                width: clamp(200px, 100%, 890px);
+                                margin: auto;
+                                .note {
+                                    width: 100%;
+                                    padding: 1rem 2.2rem 0;
+                                    gap: 0.5rem;
+                                    input[type="text"] {
+                                        border: none;
+                                        border-bottom: 1px solid #000;
+                                        outline: none;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .accommodation {
+                        margin-top: 1rem;
+                        width: 100%;
+                        height: 100%;
+                    }
+                    .itinerary {
+                        position: relative;
+                        padding: 2rem 2rem 1rem;
+                        margin-top: 1rem;
+                        background-color: #fff;
+                        .title-section {
+                            flex-direction: column;
+                            gap: 1rem;
+                            margin-bottom: 1rem;
+                            h2 {
+                                font-size: 2.5rem;
+                                letter-spacing: 0px;
+                                font-family: "Work Sans", sans-serif;
+                            }
+                            h3 {
+                                font-size: 20px;
+                                font-style: italic;
+                                text-shadow: 4px 4px 4px rgba(170, 170, 170, 0.6);
+                                font-family: "Work Sans", sans-serif;
+                            }
+                        }
+                        .placescuisines {
+                            margin-left: 2rem;
+                            margin-top: 4rem;
+                            display: flex;
+                            align-items: center;
+                            gap: 3.5rem;
+                            flex-direction: column;
+                            position: relative;
+                            .pc-display {
+                                // background-color: red;
+                                width: 100%;
+                                height: 200px;
+                                position: relative;
+                            }
+                            .nav-time {
+                                position: absolute;
+                                top: 0;
+                                bottom: 0;
+                                left: -5.5%;
+                                height: 100%;
+                                .tree {
+                                    position: absolute;
+                                    top: 0;
+                                    left: 0;
+                                    width: 0;
+                                    z-index: 1;
+                                    display: flex;
+                                    flex-direction: column;
+                                    align-items: flex-start;
+                                    gap: 14.2rem;
+                                    height: 100%;
+                                    align-items: center;
+                                    cursor: pointer;
+                                }
+                                .dot {
+                                    position: relative;
+                                    width: 30px;
+                                    height: 30px;
+                                    line-height: 30px;
+                                    background-color: #000;
+                                    border-radius: 50%;
+                                    color: white;
+                                    text-align: center;
+                                    font-size: 1rem;
+                                    transform: scale(1);
+                                    .dot-tag {
+                                        writing-mode: vertical-lr;
+                                        position: absolute;
+                                        background-color: #000;
+                                        width: 100%;
+                                        height: 100px;
+                                        font-weight: 600;
+                                        text-transform: uppercase;
+                                        font-size: 0.8rem;
+                                        letter-spacing: 1px;
+                                    }
+                                }
+                                .tree::before {
+                                    content: "";
+                                    position: absolute;
+                                    width: 2px;
+                                    height: 100%;
+                                    background-color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right {
+            width: 50%;
+            position: fixed;
+            right: 0rem;
+            z-index: -1;
+        }
+    }
+
+    @media screen and (max-width: 1414px) {
+        .row .left .body .content .about {
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: flex-start;
+            .button {
+                width: 100%;
+                justify-content: space-between;
+                flex-direction: row;
+            }
+        }
+    }
+    @media screen and (max-width: 1000px) {
+        .row .left .body .content .about .trip-basic-info .basic-info {
+            flex-direction: column;
+            gap: 0.8rem;
+            .name-price {
+                .name {
+                    input[type="text"] {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+            .price {
+                font-size: 1rem;
+                font-style: italic;
+            }
+        }
+    }
+    @media screen and (max-width: 864px) {
+        .row {
+            overflow: hidden;
+            position: relative;
+            .toggle-map button {
+                display: inline;
+            }
+            .left {
+                width: 100%;
+            }
+            .right {
+                transition: 0.25s ease-in-out;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+            }
+        }
+    }
+    @media screen and (max-width: 575px) {
+        .row .left .body .content {
+            .about {
+                padding-right: 1rem;
+            }
+            .accommodation {
+                .ac-displays-page {
+                    padding-right: 1rem;
+                }
+            }
+            .itinerary {
+                padding-right: 1rem;
+
+                .placescuisines {
+                    gap: 4rem;
+                    .pc-display {
+                        height: 150px;
+                        font-size: 0.8rem;
+
+                        .displays-page {
+                            gap: 0.5rem;
+                            .img {
+                                width: 80%;
+                            }
+                        }
+                        .cuisine-display-page {
+                            gap: 0.5rem;
+                            .img {
+                                width: 80%;
+                            }
+                        }
+                    }
+                    .nav-time {
+                        left: -6.5%;
+                        .tree {
+                            // left: 2%;
+                            justify-content: flex-start;
+                            gap: 11.9rem;
+                        }
+                        .dot {
+                            width: 25px;
+                            height: 25px;
+                            line-height: 25px;
+                            font-size: 0.8rem;
+                            .dot-tag {
+                                height: 80px;
+                                font-size: 0.6rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

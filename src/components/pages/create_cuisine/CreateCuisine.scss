@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Staatliches&display=swap");
+
+.create-cuisine-page {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f2f5;
+    form {
+        width: 70%;
+        fieldset {
+            width: 100%;
+            background-color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            border: 5px solid rgb(3, 3, 3);
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            gap: 1rem;
+
+            button {
+                padding: 0.5rem 1.5rem;
+                font-size: 1.15rem;
+                background-color: black;
+                color: white;
+                font-weight: 500;
+                border-radius: 10px;
+                transform: scale(0.9);
+                border: none;
+                cursor: pointer;
+                text-transform: uppercase;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.1s ease-in-out;
+            }
+            button:hover {
+                transform: scale(1);
+            }
+            button:active {
+                transform: scale(0.9);
+            }
+
+            .title {
+                font-size: 4rem;
+                font-style: italic;
+                text-align: center;
+                font-family: "Staatliches", cursive;
+                letter-spacing: 0.5rem;
+            }
+            .input {
+                display: flex;
+                justify-content: space-around;
+                align-items: left;
+                gap: 0.8rem;
+                width: 100%;
+                .cuisine {
+                    width: 100%;
+                    font-size: 1rem;
+                    margin-bottom: 0.4rem;
+                    label {
+                        text-transform: capitalize;
+                        font-weight: 600;
+                        font-style: italic;
+                        letter-spacing: 0;
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                    input,
+                    select {
+                        width: 100%;
+                        padding: 0 10px;
+                        min-height: 2.5rem;
+                        font-size: 1.15rem;
+                        border-radius: 0 0 15px 15px;
+                        border: none;
+                        border-bottom: 2px solid grey;
+                        cursor: pointer;
+                        outline: none;
+                    }
+                    input::-webkit-outer-spin-button,
+                    input::-webkit-inner-spin-button {
+                        appearance: none;
+                        margin: 0;
+                    }
+                }
+            }
+            .info-left-hand,
+            .info-right-hand {
+                width: 100%;
+            }
+            .description {
+                width: 100%;
+                display: flex;
+                gap: 0.5rem;
+                flex-direction: column;
+                label {
+                    text-transform: capitalize;
+                    font-weight: 600;
+                    font-style: italic;
+                    letter-spacing: 0;
+                    i {
+                        margin-right: 5px;
+                    }
+                }
+                textarea {
+                    padding: 5px 10px;
+                    border-radius: 15px;
+                    border: 2px solid grey;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1200px) {
+            fieldset {
+                gap: 0.5rem;
+                .title {
+                    font-size: 2rem;
+                }
+                button {
+                    font-size: 0.8rem;
+                    padding: 0.3rem 1rem;
+                }
+                .input {
+                    gap: 0.5rem;
+                    .cuisine {
+                        font-size: 0.8rem;
+                        label {
+                            text-transform: capitalize;
+                            font-weight: 600;
+                            font-style: italic;
+                            letter-spacing: -0.84px;
+
+                            i {
+                                margin-right: 0px;
+                            }
+                        }
+                        input,
+                        select {
+                            width: 100%;
+                            min-height: 0rem;
+                            font-size: 0.8rem;
+                            border-radius: 0;
+                        }
+                    }
+                }
+                .input-select {
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
